@@ -59,3 +59,26 @@
 .banner{
     height:190px;
 }
+
+
+.section-list{
+  list-style-type: none;
+  line-height: 1.5em;
+  margin: 5px 0 15px;
+ 
+}
+ .diamond{
+   display: flex;
+ }           
+.diamond::before {
+  content: "";
+  display: inline-block;
+  padding-left: 0;
+  width: 5px; 
+  height: 5px; 
+  border: 5px solid yellow; 
+  border-bottom-color: #000;
+  border-top-color: #000;
+}
+
+    
