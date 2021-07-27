@@ -2,6 +2,7 @@
     --main-black-color:black;
     --main-white-color:white;
 } */
+.navbar-light .navbar-nav .nav-link{color:#fff;}
 ul{list-style-type: none;}
 .bg-light-blue{
   background-color:rgb(104, 207, 225) !important;
