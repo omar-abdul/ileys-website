@@ -1,3 +1,8 @@
+
+:root{
+    --main-red-color: rgba(196, 85, 85, 0.6);
+}
+
 body{
    font-family: 'Raleway', sans-serif; 
 }
@@ -123,7 +128,7 @@ a ,a:hover{
 .transparent{background-color: transparent !important;}
 .bg-light{background-color:rgb(228, 228, 228) !important;}
 .navbar-light .navbar-nav .nav-link{color:#fff;}
-.bg-indigo{background-color:rgb(67, 133, 231);}
+.bg-light-blue{background-color:rgb(67, 133, 231) !important;}
 
 
 .header-bg{
@@ -276,6 +281,9 @@ footer{
     display:block;
     animation: fadein ease 0.8s;
 }
+.bg-red{
+    background-color: var(--main-red-color)!important;
+}
 
 .about-header{
     background: url("../img/ileys-tower.jpg") no-repeat 50% 10%;
@@ -285,6 +293,7 @@ footer{
     height: 300px;
     width:100%;
 }
+
 
 .vertical-line{
     display: block;

@@ -1,84 +1,59 @@
-:root{
+/* :root{
     --main-black-color:black;
     --main-white-color:white;
+} */
+ul{list-style-type: none;}
+.bg-light-blue{
+  background-color:rgb(104, 207, 225) !important;
 }
 
 .cover{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed !important;
 }
-.owl-carousel .owl-slide {
-    position: relative;
+
+
+  .carousel-inner .carousel-item{
     height: 100vh;
-    background-color: lightgray;
+  }
+  .carousel-inner .carousel-item::before{
+    content: "";
+    position:absolute;
+    height: inherit;
+    width: 100%;
+    background:rgba(99, 99, 99, 0.6);
+  }
+  .carousel-text{
+    position:absolute;
+    right:60%;
+    bottom:20%;
+    padding-left:1.25rem;
+    padding-right:1.25rem;
+    background-color:rgba(55,55,55,.4);
   }
    
-  .owl-carousel .owl-slide-animated {
-    transform: translateX(20px);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.05s;
-  }
-   
-  .owl-carousel .owl-slide-animated.is-transitioned {
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.5s;
-  }
-   
-  .owl-carousel .owl-slide-title.is-transitioned {
-    transition-delay: 0.2s;
-  }
-   
-  .owl-carousel .owl-slide-subtitle.is-transitioned {
-    transition-delay: 0.35s;
-  }
-   
-  .owl-carousel .owl-slide-cta.is-transitioned {
-    transition-delay: 0.5s;
-  }
-
-  .owl-carousel .owl-dots,
-.owl-carousel .owl-nav {
-  position: absolute;
-}
  
-.owl-carousel .owl-dots .owl-dot span {
-  background: transparent;
-  border: 1px solid var(--main-black-color);
-  transition: all 0.2s ease;
-}
- 
-.owl-carousel .owl-dots .owl-dot:hover span,
-.owl-carousel .owl-dots .owl-dot.active span {
-  background: var(--main-black-color);
-}
 
-.banner{
-    height:190px;
-}
+.factory-banner{
+    background-image: url("../../asset/img/factory-bg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    height:500px;
 
 
-.section-list{
-  list-style-type: none;
-  line-height: 1.5em;
-  margin: 5px 0 15px;
- 
 }
- .diamond{
-   display: flex;
- }           
-.diamond::before {
+.factory-banner::before{
   content: "";
-  display: inline-block;
-  padding-left: 0;
-  width: 5px; 
-  height: 5px; 
-  border: 5px solid yellow; 
-  border-bottom-color: #000;
-  border-top-color: #000;
+  position:absolute;
+  height: inherit;
+  width: 100%;
+  background:rgba(99, 99, 99, 0.6);
 }
-
+.section-text{
+  z-index:10;
+}
     
