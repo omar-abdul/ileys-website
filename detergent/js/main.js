@@ -1,7 +1,3 @@
-AOS.init();
-
-
-
 
   window.addEventListener('scroll', function(e) {
     var scrollpos = window.scrollY;
@@ -12,3 +8,5 @@ AOS.init();
       document.getElementById('detergent-nav').classList.remove('bg-light-blue');
     }
 });
+
+AOS.init();

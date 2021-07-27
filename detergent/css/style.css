@@ -1,11 +1,11 @@
-/* :root{
-    --main-black-color:black;
-    --main-white-color:white;
-} */
+:root{
+  --main-red-color: rgba(255, 25, 25, 0.815);
+  --light-blue:rgb(104, 207, 225)
+}
 .navbar-light .navbar-nav .nav-link{color:#fff;}
 ul{list-style-type: none;}
 .bg-light-blue{
-  background-color:rgb(104, 207, 225) !important;
+  background-color:var(--light-blue) !important;
 }
 
 .cover{
@@ -56,5 +56,9 @@ ul{list-style-type: none;}
 }
 .section-text{
   z-index:10;
+}
+
+.text-color-red{
+  color:var(--main-red-color) !important;
 }
     
