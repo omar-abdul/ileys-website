@@ -56,7 +56,7 @@ a ,a:hover{
 
 }
 .bg-soap{
-    background: url("../img/pexels-cottonbro-4154194.jpg") center center no-repeat;
+    background: url("../img/Factory.jpg") center center no-repeat;
     background-size: cover;
     height: 100vh;
     position: relative;  
@@ -88,8 +88,21 @@ a ,a:hover{
     border: 3px solid transparent;
     border-top-color: #35bdff;
     border-radius: 50%;
+    
     -webkit-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
+}
+.center-image{
+    position: absolute;
+    left:50%;
+    top: 50%;
+    margin-left:-61px;
+    margin-top:-26px;
+    display: block;
+    width: 200px;
+    -webkit-animation: fadeout 3s  ease-in-out  infinite;
+    animation: fadeout 3s ease-in-out infinite;
+
 }
 #loader:before{
     content: "";
@@ -117,18 +130,17 @@ a ,a:hover{
     -webkit-animation: spin 1.5s linear infinite;
     animation: spin 1.5s linear infinite;
 }
-.loader-image{
-    position: absolute;
-    /* margin:-20px 0 0 -45px; */
-    top: 50%;
-    left: 50%;
-}
+
 
 
 .transparent{background-color: transparent !important;}
 .bg-light{background-color:rgb(228, 228, 228) !important;}
 .navbar-light .navbar-nav .nav-link{color:#fff;}
+.navbar-light .navbar-nav .nav-link:hover{color:var(--main-red-color)!important;}
+.navbar-light .navbar-nav .active{color:var(--main-red-color)!important;}
 .bg-light-blue{background-color:rgb(67, 133, 231) !important;}
+.red-text .nav-link{font-weight:bold;}
+.red-text{color: var(--main-red-color);} 
 
 
 .header-bg{
@@ -191,6 +203,9 @@ html.sr .load-hidden {
 footer{
     position: relative;
     border:3px solid transparent;
+
+}
+footer >.bg-dark{
     border-top-color:rgb(253, 182, 76);
 }
 .social-icon{
@@ -443,5 +458,7 @@ border-left: 3px solid #ccc;
      100%{
         transform:translate(-50%,10px) rotate(90deg);
      }
+     
 }
+
 /* Animation Frames */

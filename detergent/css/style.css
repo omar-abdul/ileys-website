@@ -7,6 +7,9 @@ ul{list-style-type: none;}
 .bg-light-blue{
   background-color:var(--light-blue) !important;
 }
+.primary-text{
+  color:var(--light-blue);
+}
 
 .cover{
     background-size: cover;
@@ -32,7 +35,7 @@ ul{list-style-type: none;}
     bottom:20%;
     padding-left:1.25rem;
     padding-right:1.25rem;
-    background-color:rgba(55,55,55,.4);
+    background-color:rgba(49, 62, 70, 0.4);
   }
    
  
@@ -62,3 +65,12 @@ ul{list-style-type: none;}
   color:var(--main-red-color) !important;
 }
     
+.img-caption{
+  position: absolute;
+  top:0%;
+  right:8%;
+  height:auto;
+  width:200px;
+  background: rgba(99, 99, 99, 0.6);
+
+}

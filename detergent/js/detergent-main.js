@@ -9,4 +9,8 @@
     }
 });
 
+function swap(element){
+  document.getElementById("showcase").src=element.dataset.src;
+}
+
 AOS.init();
