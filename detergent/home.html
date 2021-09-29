@@ -36,18 +36,18 @@
 
     <!-- Content -->
     <div id="content">
-        <nav id="detergent-nav" class="navbar navbar-expand-lg fixed-top navbar-light transparent">
+        <nav id="detergent-nav" data-scroll-header class="navbar navbar-expand-lg fixed-top navbar-light transparent">
             <div class="container">
               <a class="navbar-brand" href="#">IDICO</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <div class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder">
-                    <a class="nav-link me-2 active " aria-current="page" href="#"></a>
-                    <a class="nav-link me-2 " href="#">About Us</a>
-                    <a class="nav-link me-2" href="#">Products</a>
-                    <a class="nav-link me-2 " href="#">Contact Us</a>
+                <div class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bolder" id="menu">
+                    <a class="nav-link me-2  " aria-current="page" href="#"></a>
+                    <a class="nav-link me-2" data-scroll href="#about-us">About Us</a>
+                    <a class="nav-link me-2" data-scroll href="#products">Products</a>
+                    <a class="nav-link me-2 " data-scroll href="#contact-us">Contact Us</a>
                 </div>
               </div>
             </div>
@@ -81,7 +81,7 @@
                 <span class="visually-hidden">Next</span>
               </button>
         </div>
-        <section id="about-us" class="w-100">
+        <section id="about-us" class="w-100 section">
             <div class="bg-light-blue about-us-banner" style="height:300px;"data-aos="fade-right" data-aos-mirror="false" data-aos-once="true" data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
                 <div class="container">
                     <div class="row  text-white">
@@ -112,18 +112,18 @@
            </div>
         </section>
 
-        <section id="products">
+        <section id="products" class="section">
             <div class="container">
-                <div class="row justify-content-center align-items-stretch mt-5"data-aos="fade-up" data-aos-once="true">
+                <div class="row justify-content-center align-items-stretch mt-5 px-2"data-aos="fade-up" data-aos-once="true">
                     <div class="col-12  text-center" > 
                         <h4 class="fw-bolder  text-decoration-underline">Browse All <span class="primary-text">Products</span></h4>
                     </div>
                         <div class="row justify-content-center align-items-center mt-5" >
                             <div class="col-md-8 col-sm-3">
-                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
-                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
-                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
-                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
+                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg" data-caption="first text"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
+                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg"data-caption="second text"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
+                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg"data-caption="third text"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
+                                <button onclick="swap(this)" data-src="../asset/img/IMG-20190516-WA0007.jpg"data-caption="last text"><img src="../asset/img/IMG-20190516-WA0007.jpg" class="img-thumbnail rounded" width="100px"></button>
                             </div>
                     </div>
                 </div>
@@ -131,14 +131,14 @@
                 <div class="row justify-content-center align-items-center mt-5" data-aos="fade-up" data-aos-once="true">
                     <div class="col-md-6">
                         <img id="showcase"src="../asset/img/redwood.jpg" class="img-fluid" alt="" width="600px">
-                        <div class="img-caption"><p class="img-text text-white text-wrap p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, nihil dolorem.</p></div>
+                        <div class="img-caption" ><p id="img-text" class="img-text text-white text-wrap p-3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia, nihil dolorem.</p></div>
                     </div>
 
  
                 </div>
             </div>
         </section>
-        <section id="contact-us">
+        <section id="contact-us" class="section">
             <div class="container-fluid p-5 mt-5  bg-dark">
                 <h4 class="text-white text-center">Contact <span class="primary-text">Us</span></h4>
                 <div class="container">
@@ -157,7 +157,7 @@
                         </div>
                         <div class="col-12">
                             <div class="form-floating">
-                                <textarea class="form-control" id="floatingMessage" placeholder="Message" style="height: 100px;"></textarea>
+                                <textarea class="form-control" id="floatingMessage" placeholder="Message" style="height: 230px;"></textarea>
                                 <label for="floatingMessage">Message</label>
                               </div>
                         </div>
@@ -182,7 +182,6 @@
                   <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
                   <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
                   <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
                   <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
                 </ul>
 
@@ -200,6 +199,7 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>   
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.3/dist/smooth-scroll.polyfills.min.js"></script>
 <script src="../asset/js/main.js"></script> 
 <script src="./js/detergent-main.js"></script>   
 </body>
