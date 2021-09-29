@@ -27,28 +27,46 @@ AOS.init();
 
 
 
+
+
+
+
+
 //Change Active element on scroll
+
+
 
 var section = document.querySelectorAll(".section");
   var sections = {};
   var i = 0;
-  
+
 
   Array.prototype.forEach.call(section, function(e) {
     sections[e.id] = e.offsetTop;
-    
-  
+    console.log(sections)
+
   });
 
   window.onscroll = function() {
-    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollPosition =  document.body.scrollTop ||document.documentElement.scrollTop;
 
-    for (i in sections) {
-      
-      if (sections[i] <= scrollPosition) {
-        document.getElementsByClassName('.nav-link').classList
-        document.querySelector('a[href*=' + i + ']').classList.add('active');
+    if(scrollPosition<30){
+      var navlink=document.querySelectorAll('#menu-items>.nav-link');
+     
+      for(var k=0;k<navlink.length;k++){
+        navlink[k].classList.remove('active');
+        
       }
     }
+    console.log(scrollPosition)
+    for (i in sections) {
+      
+      if (sections[i] <= scrollPosition+100)  {
+       if(document.querySelector('.nav-link.active')){document.querySelector('.nav-link.active').classList.remove('active');}
+       
+       document.querySelector('a[href*=' + i + ']').classList.add('active');
+      }
+    }
+
   };
 
