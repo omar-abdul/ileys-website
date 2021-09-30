@@ -11,9 +11,11 @@
 
 function swap(element){
   document.getElementById("showcase").src=element.dataset.src;
+  document.getElementById("showcase").classList.add('fadein');
   document.getElementById('img-text').classList.add('fadein');
   document.getElementById('img-text').innerText = element.dataset.caption;
   setTimeout(function(){
+    document.getElementById("showcase").classList.remove('fadein');
     document.getElementById('img-text').classList.remove('fadein');
   },800);
 }
@@ -43,7 +45,7 @@ var section = document.querySelectorAll(".section");
 
   Array.prototype.forEach.call(section, function(e) {
     sections[e.id] = e.offsetTop;
-    console.log(sections)
+    
 
   });
 
