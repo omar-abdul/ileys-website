@@ -20,10 +20,10 @@ function swap(element){
   },800);
 }
 
-var scroll = new SmoothScroll('a[href*="#"]',{
-  speed:200,
-  header:'[data-scroll-header]'
-});
+//var scroll = new SmoothScroll('a[href*="#"]',{
+  //speed:200,
+  //header:'[data-scroll-header]'
+//});
 
 AOS.init();
 
