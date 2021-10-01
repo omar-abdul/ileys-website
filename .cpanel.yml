@@ -2,5 +2,5 @@
 deployment:
   tasks:
     - export DEPLOYPATH =/home/ileys/public_html/
-    - /home/ileys/repositories/ cp -R ileys-website $DEPLOYPATH
+    - /home/ileys/repositories/ cp -R ileys-website2 $DEPLOYPATH
 
