@@ -1,0 +1,28 @@
+{
+  "name": "web",
+  "version": "1.0.0",
+  "description": "Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/omar-abdul/ileys-website.git"
+  },
+  "author": "Omar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/omar-abdul/ileys-website/issues"
+  },
+  "homepage": "https://github.com/omar-abdul/ileys-website#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-react": "^7.16.0"
+  }
+}
