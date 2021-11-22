@@ -4,7 +4,10 @@
   "description": "Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack",
+    "serve":"live-server public"
   },
   "repository": {
     "type": "git",
@@ -17,12 +20,18 @@
   },
   "homepage": "https://github.com/omar-abdul/ileys-website#readme",
   "dependencies": {
+    "@babel/preset-env": "^7.16.4",
+    "live-server": "^1.2.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "webpack": "^5.64.2"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
-    "@babel/preset-react": "^7.16.0"
+    "@babel/preset-react": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
   }
 }
