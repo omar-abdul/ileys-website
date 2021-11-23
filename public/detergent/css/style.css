@@ -1,7 +1,12 @@
+body {
+  position: relative;
+}
+
 :root {
   --main-red-color: rgba(255, 25, 25, 0.815);
   --light-blue: rgb(104, 207, 225);
 }
+
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
 }
