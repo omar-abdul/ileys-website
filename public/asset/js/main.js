@@ -14,12 +14,3 @@ document.onreadystatechange = function () {
     }, 1000);
   }
 };
-
-window.addEventListener("scroll", function (e) {
-  var scrollpos = window.scrollY;
-  if (scrollpos > 1) {
-    document.getElementById("enterprise-nav").classList.add("bg-light");
-  } else {
-    document.getElementById("enterprise-nav").classList.remove("bg-light");
-  }
-});
