@@ -39,7 +39,7 @@ const App = () => {
           title={infoCard.productName}
         />
       </div>
-      <div className="col-12 col-md-4">
+      <div className={`col-12 col-md-4 ${infoCard.color}`}>
         <img src={`../asset/img/${infoCard.imgSrc}`} className="img-fluid" />
       </div>
     </div>
