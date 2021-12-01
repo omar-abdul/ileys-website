@@ -1,11 +1,16 @@
-const Cards = ({ bgColor, text, title }) => {
+const Cards = ({ bgColor, text, title, imgSrc }) => {
   return (
-    <div className={`card text-white ${bgColor}`}>
-      <div className="card-header">Header</div>
-      <div className="card-body">
-        <h5 className="card-title">{title}</h5>
-
-        <p className="card-text">{text}</p>
+    <div className={`card mb-3 ${bgColor}`}>
+      <div className="row no-gutters">
+        <div className="col-md-8">
+          <img src={`../asset/img/${imgSrc}`} className="card-img" />
+        </div>
+        <div className="col-md-4">
+          <div className="card-body">
+            <h5 className="card-title fw-bold">{title}</h5>
+            <p className="card-text fw-bold">{text}</p>
+          </div>
+        </div>
       </div>
     </div>
   );

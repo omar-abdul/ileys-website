@@ -7,40 +7,52 @@ const App = () => {
   const arr = [
     {
       id: 2,
-      color: "bg-danger",
-      productName: "Hilac",
-      imgSrc: "washing-powder-1500058_1920.jpg",
-      text: "Text 1",
+      color: "bg-danger text-white",
+      productName: "Detergent Powders",
+      imgSrc: "all-detergent.jpg",
+      text: "A powerful triple formula powder meant to fight the toughest of stains",
     },
     {
       id: 3,
+      color: "bg-light-blue text-white",
+      productName: "Washing Machine Powders",
+      imgSrc: "washing-powder-1500058_1920.jpg",
+      text: "Washing Machine a new partner",
+    },
+    {
+      id: 4,
       color: "bg-pink",
-      productName: "Gaari",
+      productName: "Liquid Detergents",
       imgSrc: "gaari.jpg",
-      text: "Text 2",
+      text: "All your liquid needs",
+    },
+    {
+      id: 5,
+      color: "bg-damp-yellow",
+      productName: "Laundry Soap",
+      imgSrc: "gaari.jpg",
+      text: "tough soap",
     },
   ];
 
   const [infoCard, setInfoCard] = useState(arr[0]);
   const handleButtonClick = (item) => setInfoCard(item);
   return (
-    <div className="row">
-      <div className="col-12 col-md-4">
+    <div className="product-container">
+      <div className="list-buttons">
         <Buttons
           iteration={arr}
           changeItem={handleButtonClick}
           activeId={infoCard.id}
         />
       </div>
-      <div className="col-12 col-md-4">
+      <div className="card-container">
         <Cards
           bgColor={infoCard.color}
           text={infoCard.text}
           title={infoCard.productName}
+          imgSrc={infoCard.imgSrc}
         />
-      </div>
-      <div className="col-12 col-md-4">
-        <img src={`../asset/img/${infoCard.imgSrc}`} className="img-fluid" />
       </div>
     </div>
   );

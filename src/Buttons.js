@@ -1,12 +1,14 @@
 export const Buttons = ({ iteration, changeItem, activeId }) => {
   return (
-    <div className="d-flex flex-column">
+    <div className="list-group">
       {iteration.map((x) => (
         <button
           key={x.id}
           type="button"
-          className={`btn ${x.productName} btn-light btn-lg btn-block ${
-            activeId === x.id ? "active" : ""
+          className={` ${
+            x.productName
+          } list-group-item list-group-item-action ${
+            activeId === x.id ? `${x.color} active` : ""
           }`}
           onClick={(e) => changeItem(x)}
         >
