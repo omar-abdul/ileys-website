@@ -36,7 +36,15 @@ const App = () => {
   ];
 
   const [infoCard, setInfoCard] = useState(arr[0]);
-  const handleButtonClick = (item) => setInfoCard(item);
+  const handleButtonClick = (item) => {
+    const cardBody = document.getElementById("card-body");
+
+    cardBody.classList.add("card-current");
+
+    setTimeout(() => cardBody.classList.remove("card-current"), 1000);
+
+    return setInfoCard(item);
+  };
   return (
     <div className="product-container">
       <div className="list-buttons">
@@ -46,7 +54,7 @@ const App = () => {
           activeId={infoCard.id}
         />
       </div>
-      <div className="card-container">
+      <div className="card-container" data-aos="fade-right">
         <Cards
           bgColor={infoCard.color}
           text={infoCard.text}
