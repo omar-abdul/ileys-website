@@ -6,7 +6,7 @@ const Cards = ({ bgColor, text, title, imgSrc }) => {
           <img src={`../asset/img/${imgSrc}`} className="card-img" />
         </div>
         <div className="col-md-4">
-          <div className={`card-body`} id="card-body">
+          <div className={`card-body  empty`} id="card-body">
             <h5 className="card-title fw-bold">{title}</h5>
             <p className="card-text fw-bold">{text}</p>
           </div>
