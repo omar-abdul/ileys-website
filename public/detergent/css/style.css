@@ -92,13 +92,21 @@ ul {
 
 .buttons button#next {
   position: absolute;
+<<<<<<< HEAD
   top: 50%;
+=======
+  top: 40%;
+>>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
   right: 20px;
 }
 
 .buttons button#prev {
   position: absolute;
+<<<<<<< HEAD
   top: 50%;
+=======
+  top: 40%;
+>>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
   left: 20px;
 }
 .buttons button {
@@ -185,6 +193,7 @@ ul {
 .navbar-light .navbar-nav .show > .nav-link {
   color: rgb(0, 0, 0, 0.4);
 }
+<<<<<<< HEAD
 .product-container {
   display: grid;
 
@@ -226,7 +235,97 @@ ul {
 .Gaari.active {
   background-color: pink;
   color: white;
+=======
+#products {
+  background-color: rgb(248, 245, 245);
+  overflow: hidden;
+  max-height: 500px;
+}
+.product-container {
+  display: grid;
+
+  grid-template-columns: 200px 300px 300px;
+  grid-template-rows: auto;
+
+  gap: 20px;
+  justify-content: center;
+}
+.list-buttons {
+  /* grid-column: 2 / span 1; */
+  text-align: center;
+}
+.card-container {
+  grid-column: 2 /-1;
+}
+
+.product-card {
+  display: flex;
+}
+.product-img {
+  height: 300px;
+  width: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-card-content {
+  padding: 10px;
+
+  min-height: 100%;
+  background: aliceblue;
+  width: 50%;
+}
+
+@media (max-width: 700px) {
+  #products {
+    max-height: 100%;
+  }
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+  .card-container,
+  .list-buttons {
+    grid-column: 1/-1;
+  }
+
+  .product-img,
+  .product-card-content {
+    width: 50%;
+  }
+  #product-section {
+    margin: 0;
+  }
+}
+.list-group-item.active {
+  border-color: rgba(0, 0, 0, 0.125);
+  font-weight: bold;
+>>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
 }
 .bg-pink {
   background-color: pink !important;
 }
+<<<<<<< HEAD
+=======
+.bg-damp-yellow {
+  background-color: rgb(255, 227, 133) !important;
+}
+
+#contact-us {
+  margin-top: -47px;
+}
+.card-current {
+  animation: fade-in ease-in-out 0.6s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+>>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c

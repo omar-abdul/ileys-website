@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
 .change-color {
   display: inline;
   animation: color-change 5s ease-in-out;
@@ -15,3 +18,26 @@
     color: red;
   }
 }
+=======
+>>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
+.change-color {
+  display: inline;
+  animation: color-change 5s ease-in-out;
+  color: red;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(102, 85, 255);
+  }
+  50% {
+    color: rgb(255, 229, 85);
+  }
+  100% {
+    color: red;
+  }
+}
+<<<<<<< HEAD
+=======
+>>>>>>> b24896d267b56bc2a67a4ddf58e918e1e0aeb1ee
+>>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
