@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 var section = document.querySelectorAll(".section");
 var sections = {};
 var i = 0;
@@ -40,8 +37,7 @@ window.addEventListener("scroll", function (e) {
   }
 });
 AOS.init();
-=======
->>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
+
 var section = document.querySelectorAll(".section");
 var sections = {};
 var i = 0;
@@ -81,7 +77,3 @@ window.addEventListener("scroll", function (e) {
   }
 });
 AOS.init();
-<<<<<<< HEAD
-=======
->>>>>>> b24896d267b56bc2a67a4ddf58e918e1e0aeb1ee
->>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c

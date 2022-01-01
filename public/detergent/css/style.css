@@ -92,21 +92,13 @@ ul {
 
 .buttons button#next {
   position: absolute;
-<<<<<<< HEAD
-  top: 50%;
-=======
   top: 40%;
->>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
   right: 20px;
 }
 
 .buttons button#prev {
   position: absolute;
-<<<<<<< HEAD
-  top: 50%;
-=======
   top: 40%;
->>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
   left: 20px;
 }
 .buttons button {
@@ -193,49 +185,6 @@ ul {
 .navbar-light .navbar-nav .show > .nav-link {
   color: rgb(0, 0, 0, 0.4);
 }
-<<<<<<< HEAD
-.product-container {
-  display: grid;
-
-  grid-template-columns: repeat(3, 2fr);
-  grid-template-rows: 300px 300px;
-  text-align: center;
-}
-.list-buttons {
-  width: 300px;
-  margin-left: 30px;
-}
-.card-container {
-  grid-column: 2 /-1;
-  position: relative;
-}
-
-.product-card {
-}
-.product-img {
-  height: 300px;
-  width: 100%;
-  background-size: contain;
-  background-repeat: no-repeat;
-  min-height: 200px;
-}
-.product-card-content {
-  padding: 10px;
-  height: 300px;
-  background: aliceblue;
-  width: 300px;
-  position: absolute;
-  top: 0;
-  right: 19%;
-}
-.Hilac.active {
-  background-color: red;
-  color: white;
-}
-.Gaari.active {
-  background-color: pink;
-  color: white;
-=======
 #products {
   background-color: rgb(248, 245, 245);
   overflow: hidden;
@@ -298,13 +247,10 @@ ul {
 .list-group-item.active {
   border-color: rgba(0, 0, 0, 0.125);
   font-weight: bold;
->>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
 }
 .bg-pink {
   background-color: pink !important;
 }
-<<<<<<< HEAD
-=======
 .bg-damp-yellow {
   background-color: rgb(255, 227, 133) !important;
 }
@@ -328,4 +274,3 @@ ul {
     transform: translateY(-10px);
   }
 }
->>>>>>> 5491111f37f210d9c52841a61bc900fdd8c2267c
