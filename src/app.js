@@ -9,14 +9,14 @@ const App = () => {
       id: 2,
       color: "bg-danger text-white",
       productName: "Detergent Powders",
-      imgSrc: "all-detergent.jpg",
+      imgSrc: "all-detergent-resized.jpg",
       text: "A powerful triple formula powder meant to fight the toughest of stains",
     },
     {
       id: 3,
       color: "bg-light-blue text-white",
       productName: "Washing Machine Powders",
-      imgSrc: "washing powder.jpg",
+      imgSrc: "washing-machine-powder.jpg",
       text: "Leave your dirty works to our Washing Machine Powder ",
     },
     {
@@ -30,7 +30,7 @@ const App = () => {
       id: 5,
       color: "bg-damp-yellow",
       productName: "Laundry Soap",
-      imgSrc: "Safi Soap.jpg",
+      imgSrc: "Safi-Soap.jpg",
       text: "Safi Soap sets the bar cleaning the toughest of slime",
     },
   ];
