@@ -5,7 +5,7 @@ module.exports = {
     path: path.join(__dirname, "public/detergent/js"),
     filename: "app.js",
   },
-  mode: "development",
+  mode: "production",
   module: {
     rules: [
       {

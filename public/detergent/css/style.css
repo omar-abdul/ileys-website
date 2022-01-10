@@ -129,10 +129,10 @@ ul {
   background: url("../../asset/img/all-detergent.jpg");
 }
 .slide:nth-child(2) {
-  background: url("../../asset/img/washing-powder-1500058_1920.jpg");
+  background: url("../../asset/img/washing-powder.jpg");
 }
 .slide:nth-child(3) {
-  background: url("../../asset/img/people-5545363_1920.png");
+  background: url("../../asset/img/brands-powder.jpg");
 }
 .slide:nth-child(n) {
   background-size: cover;
