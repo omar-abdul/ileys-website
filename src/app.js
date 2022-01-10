@@ -16,22 +16,22 @@ const App = () => {
       id: 3,
       color: "bg-light-blue text-white",
       productName: "Washing Machine Powders",
-      imgSrc: "washing-powder-1500058_1920.jpg",
-      text: "Washing Machine a new partner",
+      imgSrc: "washing powder.jpg",
+      text: "Leave your dirty works to our Washing Machine Powder ",
     },
     {
       id: 4,
       color: "bg-pink",
       productName: "Liquid Detergents",
-      imgSrc: "gaari.jpg",
-      text: "All your liquid needs",
+      imgSrc: "liquid-products.jpg",
+      text: "Whatever the stain, Our strong yet gentle variable Liquid Detergents will take care of it",
     },
     {
       id: 5,
       color: "bg-damp-yellow",
       productName: "Laundry Soap",
-      imgSrc: "gaari.jpg",
-      text: "tough soap",
+      imgSrc: "Safi Soap.jpg",
+      text: "Safi Soap sets the bar cleaning the toughest of slime",
     },
   ];
 

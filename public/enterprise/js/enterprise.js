@@ -37,6 +37,7 @@ window.addEventListener("scroll", function (e) {
   }
 });
 AOS.init();
+<<<<<<< HEAD
 
 var section = document.querySelectorAll(".section");
 var sections = {};
@@ -77,3 +78,5 @@ window.addEventListener("scroll", function (e) {
   }
 });
 AOS.init();
+=======
+>>>>>>> 3f07475371af77e4bc0df892967f149b22a1cb59
