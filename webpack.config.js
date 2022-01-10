@@ -15,13 +15,9 @@ module.exports = {
       },
     ],
   },
-  devtool: "eval-cheap-module-source-map",
+  //devtool: "eval-cheap-module-source-map",
   devServer: {
     //    index: "home.html",
   },
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-},
+
 };

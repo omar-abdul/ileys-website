@@ -1,7 +1,7 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import { Buttons } from "./Buttons";
-import Cards from "./Cards";
+const Buttons = React.lazy(()=>import("./Buttons"))
+const Cards = React.lazy(()=> import("./Cards"))
 
 const App = () => {
   const arr = [
