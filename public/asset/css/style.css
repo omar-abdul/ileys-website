@@ -1,5 +1,5 @@
 :root {
-  --main-red-color: rgba(255, 67, 67, 0.6);
+  --main-red-color: rgb(230, 46, 77);
 }
 .primary-text {
   color: var(--main-red-color);
@@ -21,6 +21,10 @@ a:hover {
 .btn-outline-danger {
   color: #fff;
   border-color: #fff;
+}
+.bg-primary {
+  background-color: var(--main-red-color) !important;
+  opacity: 0.6;
 }
 
 @media (min-width: 768px) {
@@ -49,7 +53,7 @@ a:hover {
 }
 
 .bg-building {
-  background: url("../img/pexels-pixabay-302769.jpg") no-repeat center center;
+  background: url("../img/ileys-tower.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
   height: 100vh;
@@ -102,10 +106,9 @@ a:hover {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -61px;
+  margin-left: -70px;
   margin-top: -26px;
   display: block;
-  width: 200px;
   -webkit-animation: fadeout 3s ease-in-out infinite;
   animation: fadeout 3s ease-in-out infinite;
 }
@@ -140,7 +143,7 @@ a:hover {
   background-color: transparent !important;
 }
 .bg-light {
-  background-color: rgb(228, 228, 228) !important;
+  background-color: var(--main-red-color) !important;
 }
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
@@ -260,13 +263,12 @@ footer > .bg-dark {
   position: relative;
 }
 .img-ironsheet {
-  background: url("../img/iron-sheets-416x416.jpg") center center no-repeat;
+  background: url("../img/ironsheets.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
 }
 .img-plywood {
-  background: url("../img/Veneered-Maxi-Birch-Plywood-Panels.jpg") center center
-    no-repeat;
+  background: url("../img/plywood.jpg") center center no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -288,7 +290,6 @@ footer > .bg-dark {
   top: 50%;
   width: 100%;
   color: #fff;
-  z-index: 100;
 }
 
 .item-container:hover::after {
@@ -297,8 +298,8 @@ footer > .bg-dark {
   bottom: 0;
   width: 100%;
   height: 50%;
-  background: rgba(63, 63, 63, 0.4);
-  animation: fadein 0.75s ease;
+  background: rgba(0, 0, 0, 0.6);
+  animation: fadein 0.4s ease;
 }
 .item-container:hover {
   transform: scale(1.1);
@@ -306,12 +307,11 @@ footer > .bg-dark {
 }
 .item-display {
   background-color: #cccc;
-  width: 100%;
-  height: 100%;
 }
 .item-container:hover > .img-info {
   display: block;
-  animation: fadein ease 0.8s;
+  animation: fadein ease-in 0.2s;
+  z-index: 100;
 }
 .bg-red {
   background-color: var(--main-red-color) !important;
@@ -405,7 +405,9 @@ blockquote {
   0% {
     opacity: 0;
   }
-
+  50% {
+    opacity: 0.8;
+  }
   100% {
     opacity: 1;
   }
@@ -472,3 +474,11 @@ blockquote {
 }
 
 /* Animation Frames */
+
+/*media queries*/
+
+@media only screen and (max-width: 500px) {
+  .item-container {
+    margin: auto;
+  }
+}

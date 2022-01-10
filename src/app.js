@@ -37,11 +37,11 @@ const App = () => {
 
   const [infoCard, setInfoCard] = useState(arr[0]);
   const handleButtonClick = (item) => {
-    const cardBody = document.getElementById("card-body");
+    const cardBody = document.getElementById("card-img");
 
     cardBody.classList.add("card-current");
 
-    setTimeout(() => cardBody.classList.remove("card-current"), 1000);
+    setTimeout(() => cardBody.classList.remove("card-current"), 300);
 
     return setInfoCard(item);
   };

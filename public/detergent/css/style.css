@@ -1,5 +1,6 @@
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 :root {
@@ -12,6 +13,9 @@ body {
   padding: 0;
 }
 
+.translucent {
+  background-color: rgba(99, 99, 99, 0.6);
+}
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
 }
@@ -129,10 +133,10 @@ ul {
   background: url("../../asset/img/all-detergent.jpg");
 }
 .slide:nth-child(2) {
-  background: url("../../asset/img/washing-powder-1500058_1920.jpg");
+  background: url("../../asset/img/washing-powder.jpg");
 }
 .slide:nth-child(3) {
-  background: url("../../asset/img/people-5545363_1920.png");
+  background: url("../../asset/img/brand-powder.jpg");
 }
 .slide:nth-child(n) {
   background-size: cover;
@@ -264,13 +268,11 @@ ul {
 @keyframes fade-in {
   0% {
     opacity: 0;
-    transform: translateY(15px);
   }
   50% {
     opacity: 0.5;
   }
   100% {
     opacity: 1;
-    transform: translateY(-10px);
   }
 }

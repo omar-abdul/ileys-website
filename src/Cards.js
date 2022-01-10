@@ -3,7 +3,11 @@ const Cards = ({ bgColor, text, title, imgSrc }) => {
     <div className={`card mb-3 ${bgColor}`} style={{ maxWidth: "650px" }}>
       <div className="row no-gutters">
         <div className="col-md-8">
-          <img src={`../asset/img/${imgSrc}`} className="card-img" />
+          <img
+            src={`../asset/img/${imgSrc}`}
+            className="card-img"
+            id="card-img"
+          />
         </div>
         <div className="col-md-4">
           <div className={`card-body  empty`} id="card-body">
