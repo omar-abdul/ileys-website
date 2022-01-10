@@ -263,7 +263,7 @@ ul {
   margin-top: -47px;
 }
 .card-current {
-  animation: fade-in ease 0.3s;
+  animation: fade-in ease 0.8s;
 }
 @keyframes fade-in {
   0% {
