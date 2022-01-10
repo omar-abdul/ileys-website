@@ -130,7 +130,7 @@ ul {
 }
 
 .slide:first-child {
-  background: url("../../asset/img/all-detergent.jpg");
+  background: url("../../asset/img/all-detergent-resized.jpg");
 }
 .slide:nth-child(2) {
   background: url("../../asset/img/washing-powder.jpg");
