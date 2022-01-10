@@ -41,7 +41,7 @@ const App = () => {
 
     cardBody.classList.add("card-current");
 
-    setTimeout(() => cardBody.classList.remove("card-current"), 300);
+    setTimeout(() => cardBody.classList.remove("card-current"), 500);
 
     return setInfoCard(item);
   };
