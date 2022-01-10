@@ -5,7 +5,7 @@ module.exports = {
     path: path.join(__dirname, "public/detergent/js"),
     filename: "app.js",
   },
-  mode: "production",
+  //mode: "production",
   module: {
     rules: [
       {
@@ -19,4 +19,9 @@ module.exports = {
   devServer: {
     //    index: "home.html",
   },
+  performance: {
+    hints: false,
+    maxEntrypointSize: 512000,
+    maxAssetSize: 512000
+},
 };
