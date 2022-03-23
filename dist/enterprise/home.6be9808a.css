@@ -1,0 +1,21 @@
+.change-color {
+  color: red;
+  animation: color-change 5s ease-in-out;
+  display: inline;
+}
+
+@keyframes color-change {
+  0% {
+    color: #65f;
+  }
+
+  50% {
+    color: #ffe555;
+  }
+
+  100% {
+    color: red;
+  }
+}
+
+/*# sourceMappingURL=home.6be9808a.css.map */

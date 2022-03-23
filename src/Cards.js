@@ -1,4 +1,5 @@
 const Cards = ({ bgColor, text, title, imgSrc }) => {
+
   return (
     <div className={`card mb-3 ${bgColor}`} style={{ maxWidth: "650px" }}>
       <div className="row no-gutters">

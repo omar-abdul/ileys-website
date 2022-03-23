@@ -1,0 +1,278 @@
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+
+:root {
+  --main-red-color: rgba(255, 25, 25, 0.815);
+  --light-blue: rgb(104, 207, 225);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.translucent {
+  background-color: rgba(99, 99, 99, 0.6);
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+}
+ul {
+  list-style-type: none;
+}
+.bg-light-blue {
+  background-color: var(--light-blue) !important;
+}
+.primary-text {
+  color: var(--light-blue);
+}
+
+.cover {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+}
+
+.carousel-inner .carousel-item {
+  height: 100vh;
+}
+.carousel-inner .carousel-item::before {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  background: rgba(99, 99, 99, 0.6);
+}
+.carousel-text {
+  position: absolute;
+  right: 60%;
+  bottom: 20%;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background-color: rgba(49, 62, 70, 0.4);
+}
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  height: 100vh;
+  width: 100vw;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.slide.current {
+  opacity: 1;
+}
+.slide .content {
+  position: absolute;
+  bottom: 70px;
+  left: -600px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 35px;
+  opacity: 0;
+}
+.slide .content h1 {
+  margin-bottom: 10px;
+}
+
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
+}
+
+.buttons button#next {
+  position: absolute;
+  top: 40%;
+  right: 20px;
+}
+
+.buttons button#prev {
+  position: absolute;
+  top: 40%;
+  left: 20px;
+}
+.buttons button {
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  padding: 13px 15px;
+  outline: none;
+}
+.buttons button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+  .slide.current .content {
+    transform: translateY(-300px);
+  }
+}
+
+.slide:first-child {
+  background: url("../../asset/img/all-detergent-resized.jpg");
+}
+.slide:nth-child(2) {
+  background: url("../../asset/img/washing-powder.jpg");
+}
+.slide:nth-child(3) {
+  background: url("../../asset/img/brand-powder.jpg");
+}
+.slide:nth-child(n) {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed !important;
+}
+
+.factory-banner {
+  background-image: url("../../asset/img/factory-bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 500px;
+}
+.factory-banner::before {
+  content: "";
+  position: absolute;
+  height: inherit;
+  width: 100%;
+  background: rgba(99, 99, 99, 0.6);
+}
+.section-text {
+  z-index: 10;
+}
+
+.text-color-red {
+  color: var(--main-red-color) !important;
+}
+
+.img-caption {
+  position: absolute;
+  top: 0%;
+  right: 8%;
+  height: auto;
+  width: 200px;
+  background: rgba(99, 99, 99, 0.6);
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: rgb(0, 0, 0, 0.4);
+}
+#products {
+  background-color: rgb(248, 245, 245);
+  overflow: hidden;
+  max-height: 500px;
+}
+.product-container {
+  display: grid;
+
+  grid-template-columns: 200px 300px 300px;
+  grid-template-rows: auto;
+
+  gap: 20px;
+  justify-content: center;
+}
+.list-buttons {
+  /* grid-column: 2 / span 1; */
+  text-align: center;
+}
+.card-container {
+  grid-column: 2 /-1;
+}
+
+.product-card {
+  display: flex;
+}
+.product-img {
+  height: 300px;
+  width: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.product-card-content {
+  padding: 10px;
+
+  min-height: 100%;
+  background: aliceblue;
+  width: 50%;
+}
+
+@media (max-width: 700px) {
+  #products {
+    max-height: 100%;
+  }
+  .product-container {
+    grid-template-columns: 1fr;
+  }
+  .card-container,
+  .list-buttons {
+    grid-column: 1/-1;
+  }
+
+  .product-img,
+  .product-card-content {
+    width: 50%;
+  }
+  #product-section {
+    margin: 0;
+  }
+}
+.list-group-item.active {
+  border-color: rgba(0, 0, 0, 0.125);
+  font-weight: bold;
+}
+.bg-pink {
+  background-color: pink !important;
+}
+.bg-damp-yellow {
+  background-color: rgb(255, 227, 133) !important;
+}
+
+#contact-us {
+  margin-top: -47px;
+}
+.card-current {
+  animation: fade-in ease 0.8s;
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
