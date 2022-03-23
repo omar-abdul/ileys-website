@@ -1070,6 +1070,7 @@ const App = ()=>{
             }, undefined),
             /*#__PURE__*/ _jsxDevRuntime.jsxDEV("div", {
                 className: "card-container",
+                "data-aos": "fade-right",
                 children: /*#__PURE__*/ _jsxDevRuntime.jsxDEV(_cardsDefault.default, {
                     bgColor: infoCard.color,
                     text: infoCard.text,

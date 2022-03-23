@@ -59,7 +59,7 @@ const App = () => {
           activeId={infoCard.id}
         />
       </div>
-      <div className="card-container" >
+      <div className="card-container" data-aos="fade-right">
         
         <Cards
           bgColor={infoCard.color}

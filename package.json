@@ -8,8 +8,7 @@
     "start": "webpack --watch",
     "build": "webpack --mode production",
     "serve": "live-server public",
-    "start-parcel":"parcel src/index.html --open"
-
+    "start-parcel": "parcel src/index.html --open"
   },
   "repository": {
     "type": "git",
@@ -23,6 +22,7 @@
   "homepage": "https://github.com/omar-abdul/ileys-website#readme",
   "dependencies": {
     "@babel/preset-env": "^7.16.4",
+    "aos": "^3.0.0-beta.6",
     "parcel": "^2.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
