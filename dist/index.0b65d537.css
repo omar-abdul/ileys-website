@@ -1,9 +1,10 @@
 :root {
   --main-red-color: #e62e4d;
+  --light-blue: #68cfe1;
 }
 
 .primary-text {
-  color: var(--main-red-color);
+  color: var( --light-blue);
 }
 
 body {
@@ -140,7 +141,7 @@ a, a:hover {
 }
 
 .bg-light {
-  background-color: var(--main-red-color) !important;
+  background-color: var( --light-blue) !important;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -148,7 +149,7 @@ a, a:hover {
 }
 
 #enterprise-nav .navbar-nav .nav-link:hover {
-  color: var(--main-red-color) !important;
+  color: var( --light-blue) !important;
 }
 
 #enterprise-nav .navbar-nav .active {
@@ -311,7 +312,6 @@ footer > .bg-dark {
 }
 
 .item-container:hover {
-  z-index: 100;
   transform: scale(1.1);
 }
 

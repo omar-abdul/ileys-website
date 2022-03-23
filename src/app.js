@@ -1,7 +1,8 @@
 import { useState } from "react";
 import ReactDOM from "react-dom";
 import { Buttons } from "./Buttons";
-import Cards from "./Cards";
+import Cards from './Cards'
+
 
 import detergent from "./asset/img/all-detergent-resized.jpg"
 import washingMachine from  "./asset/img/washing-machine-powder.jpg";
@@ -9,7 +10,8 @@ import liquidProducts from "./asset/img/liquid-products.jpg";
 import saafi from "./asset/img/Safi-Soap.jpg";
 
 import AOS from 'aos';
-import 'aos/dist/aos.css';
+// import 'aos/dist/aos.css';
+AOS.init(); 
 
 const App = () => {
   const arr = [
@@ -62,7 +64,7 @@ const App = () => {
           activeId={infoCard.id}
         />
       </div>
-      <div className="card-container" data-aos="fade-right">
+      <div className="card-container" data-aos="fade-left">
         
         <Cards
           bgColor={infoCard.color}
@@ -74,6 +76,6 @@ const App = () => {
     </div>
   );
 };
-AOS.init();
+
 
 ReactDOM.render(<App />, document.getElementById("product-section"));

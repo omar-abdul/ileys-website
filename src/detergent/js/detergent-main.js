@@ -7,16 +7,18 @@ window.addEventListener("scroll", function (e) {
   }
 });
 
-function swap(element) {
-  document.getElementById("showcase").src = element.dataset.src;
-  document.getElementById("showcase").classList.add("fadein");
-  document.getElementById("img-text").classList.add("fadein");
-  document.getElementById("img-text").innerText = element.dataset.caption;
-  setTimeout(function () {
-    document.getElementById("showcase").classList.remove("fadein");
-    document.getElementById("img-text").classList.remove("fadein");
-  }, 800);
-}
+AOS.init();
+
+// function swap(element) {
+//   document.getElementById("showcase").src = element.dataset.src;
+//   document.getElementById("showcase").classList.add("fadein");
+//   document.getElementById("img-text").classList.add("fadein");
+//   document.getElementById("img-text").innerText = element.dataset.caption;
+//   setTimeout(function () {
+//     document.getElementById("showcase").classList.remove("fadein");
+//     document.getElementById("img-text").classList.remove("fadein");
+//   }, 800);
+// }
 
 //var scroll = new SmoothScroll('a[href*="#"]',{
 //speed:200,
@@ -25,7 +27,7 @@ function swap(element) {
 
 
 
-//Change Active element on scroll
+// Change Active element on scroll
 
 var section = document.querySelectorAll(".section");
 var sections = {};
