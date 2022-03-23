@@ -261,7 +261,14 @@ footer > .bg-dark {
 }
 
 .img-redwood {
-  background: url("redwood.10a7ee11.jpg") center / cover no-repeat;
+  background-color: #0000;
+  background-image: linear-gradient(#f5f6fc85, #75135dba), url("redwood.10a7ee11.jpg");
+  background-position: 0 0, center;
+  background-repeat: repeat, no-repeat;
+  background-size: cover;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
   position: relative;
 }
 
@@ -294,35 +301,15 @@ footer > .bg-dark {
 }
 
 .img-info {
-  width: 100%;
   color: #fff;
-  display: none;
   position: absolute;
-  top: 50%;
-}
-
-.item-container:hover:after {
-  content: "";
-  width: 100%;
-  height: 50%;
-  background: #0009;
-  animation: fadein .4s;
-  position: absolute;
-  bottom: 0;
 }
 
 .item-container:hover {
-  transform: scale(1.1);
 }
 
 .item-display {
   background-color: #cccc;
-}
-
-.item-container:hover > .img-info {
-  z-index: 100;
-  animation: fadein .2s ease-in;
-  display: block;
 }
 
 .bg-red {
