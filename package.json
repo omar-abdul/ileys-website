@@ -7,7 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch",
     "build": "webpack --mode production",
-    "serve":"live-server public"
+    "serve": "live-server public",
+    "start-parcel":"parcel src/index.html --open"
+
   },
   "repository": {
     "type": "git",
@@ -21,7 +23,7 @@
   "homepage": "https://github.com/omar-abdul/ileys-website#readme",
   "dependencies": {
     "@babel/preset-env": "^7.16.4",
-    "live-server": "^1.2.1",
+    "parcel": "^2.4.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack": "^5.64.2"
