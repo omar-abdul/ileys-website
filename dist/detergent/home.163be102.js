@@ -17,7 +17,6 @@ function swap(element) {
 //speed:200,
 //header:'[data-scroll-header]'
 //});
-AOS.init();
 //Change Active element on scroll
 var section = document.querySelectorAll(".section");
 var sections = {};

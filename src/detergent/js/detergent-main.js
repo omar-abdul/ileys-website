@@ -23,7 +23,7 @@ function swap(element) {
 //header:'[data-scroll-header]'
 //});
 
-AOS.init();
+
 
 //Change Active element on scroll
 
