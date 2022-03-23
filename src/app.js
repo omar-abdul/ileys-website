@@ -8,6 +8,9 @@ import washingMachine from  "./asset/img/washing-machine-powder.jpg";
 import liquidProducts from "./asset/img/liquid-products.jpg";
 import saafi from "./asset/img/Safi-Soap.jpg";
 
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 const App = () => {
   const arr = [
     {
@@ -71,5 +74,6 @@ const App = () => {
     </div>
   );
 };
+AOS.init();
 
 ReactDOM.render(<App />, document.getElementById("product-section"));
