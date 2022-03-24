@@ -51,6 +51,10 @@ a, a:hover {
   transform: translate(-50%, -50%);
 }
 
+#content {
+  overflow: hidden;
+}
+
 .sub-content {
   margin-top: 100px;
 }
@@ -255,20 +259,12 @@ footer > .bg-dark {
 .item-container {
   width: 250px;
   height: 450px;
-  background-color: #9b9a9a80;
-  transition: transform .2s;
+  background: linear-gradient(#f5f6fc85, #75135dba);
   position: relative;
 }
 
 .img-redwood {
-  background-color: #0000;
-  background-image: linear-gradient(#f5f6fc85, #75135dba), url("redwood.10a7ee11.jpg");
-  background-position: 0 0, center;
-  background-repeat: repeat, no-repeat;
-  background-size: cover;
-  background-attachment: scroll, scroll;
-  background-origin: padding-box, padding-box;
-  background-clip: border-box, border-box;
+  background: url("redwood.10a7ee11.jpg") center / cover no-repeat;
   position: relative;
 }
 
@@ -300,9 +296,20 @@ footer > .bg-dark {
   position: absolute;
 }
 
-.img-info {
+.img-info-box {
+  width: 100%;
+  height: 100%;
   color: #fff;
+  opacity: 0;
+  background: linear-gradient(#7484e085, #fd3f7eba);
+  transition: all .3s ease-in-out;
+  position: relative;
+}
+
+.img-caption {
+  padding: 20px;
   position: absolute;
+  bottom: 10%;
 }
 
 .item-container:hover {
@@ -310,6 +317,12 @@ footer > .bg-dark {
 
 .item-display {
   background-color: #cccc;
+}
+
+.item-container:hover > .img-info-box {
+  opacity: 1;
+  z-index: 100;
+  animation: fadein .5s ease-in-out;
 }
 
 .bg-red {
@@ -358,16 +371,6 @@ blockquote {
   }
 }
 
-@-webkit-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes fadein {
   0% {
     opacity: 0;
@@ -375,26 +378,6 @@ blockquote {
 
   50% {
     opacity: .8;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadein {
-  0% {
-    opacity: 0;
   }
 
   100% {
