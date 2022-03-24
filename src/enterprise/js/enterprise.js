@@ -3,7 +3,6 @@ var sections = {};
 var i = 0;
 Array.prototype.forEach.call(section, function (e) {
   sections[e.id] = e.offsetTop;
-  console.log(sections);
 });
 
 window.onscroll = function () {
@@ -24,7 +23,6 @@ window.onscroll = function () {
         document.querySelector(".nav-link.active").classList.remove("active");
       }
       document.querySelector("a[href*=" + i + "]").classList.add("active");
-      console.log(i);
     }
   }
 };
@@ -36,4 +34,9 @@ window.addEventListener("scroll", function (e) {
     document.getElementById("enterprise-nav").classList.remove("bg-light");
   }
 });
+
 AOS.init();
+document.addEventListener("aos:in:color", ({ detail }) => {
+  console.log("animated in", detail);
+  detail.classList.add("change-color");
+});

@@ -1,7 +1,106 @@
 .change-color {
-  color: red;
-  animation: color-change 5s ease-in-out;
+  animation: color-change 2s infinite alternate;
   display: inline;
+}
+
+.item-container {
+  width: 250px;
+  height: 450px;
+  background: linear-gradient(#f5f6fc85, #75135dba);
+  position: relative;
+}
+
+.img-redwood {
+  background: url("../redwood.10a7ee11.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.img-steelbar {
+  background: url("../deformed-bar.18bb7c7d.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.img-ironsheet {
+  background: url("../ironsheets.55f13ce9.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.img-plywood {
+  background: url("../plywood.db596c18.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.img-cement {
+  background: url("../Raysut-Cement.865cbfed.png") center / cover no-repeat;
+  position: relative;
+}
+
+.img-tiles {
+  background: url("../tiles.a1520a17.jpg") center / cover no-repeat;
+  position: relative;
+}
+
+.item-container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #5f5f5f33;
+  position: absolute;
+}
+
+.img-info-box {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  opacity: 0;
+  background: linear-gradient(#7484e085, #fd3f7eba);
+  transition: all .3s ease-in-out;
+  position: relative;
+}
+
+.img-caption {
+  padding: 20px;
+  font-weight: bolder;
+  position: absolute;
+  bottom: 10%;
+}
+
+.item-display {
+  background-color: #e0dfdfcc;
+}
+
+.item-container:hover > .img-info-box {
+  opacity: 1;
+  z-index: 100;
+  animation: fadein .5s ease-in-out;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: .3;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes color-change {

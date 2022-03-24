@@ -1,7 +1,173 @@
 .change-color {
   display: inline;
-  animation: color-change 5s ease-in-out;
-  color: red;
+  animation: color-change 2s infinite;
+  animation-direction: alternate;
+}
+
+.item-container {
+  width: 250px;
+  height: 450px;
+  background-color: rgba(155, 154, 154, 0.5);
+
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    rgba(245, 246, 252, 0.52),
+    rgba(117, 19, 93, 0.73)
+  );
+}
+/* https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html/ */
+.img-redwood {
+  background: url("../../asset/img/redwood.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.img-steelbar {
+  background: url("../../asset/img/deformed-bar.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.img-ironsheet {
+  background: url("../../asset/img/ironsheets.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.img-plywood {
+  background: url("../../asset/img/plywood.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.img-cement {
+  background: url("../../asset/img/Raysut-Cement.png") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.img-tiles {
+  background: url("../../asset/img/tiles.jpg") center center no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.item-container::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(95, 95, 95, 0.2);
+}
+.img-info-box {
+  background: linear-gradient(#7484e085, #fd3f7eba);
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+
+  transition: all ease-in-out.3s;
+  opacity: 0;
+}
+.img-caption {
+  position: absolute;
+  bottom: 10%;
+  padding: 20px;
+  font-weight: bolder;
+}
+
+.item-display {
+  background-color: rgba(224, 223, 223, 0.8);
+}
+.item-container:hover > .img-info-box {
+  opacity: 1;
+  animation: fadein ease-in-out 0.5s;
+  z-index: 100;
+}
+/* Animation key frames */
+@-webkit-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes color-change {
