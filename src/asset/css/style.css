@@ -3,12 +3,11 @@
   --light-blue: rgb(104, 207, 225);
 }
 .primary-text {
-  color: var(  --light-blue);
+  color: var(--light-blue);
 }
 
 body {
   font-family: "Raleway", sans-serif;
-
 }
 a,
 a:hover {
@@ -49,7 +48,7 @@ a:hover {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#content{
+#content {
   overflow: hidden;
 }
 .sub-content {
@@ -147,13 +146,13 @@ a:hover {
   background-color: transparent !important;
 }
 .bg-light {
-  background-color: var(  --light-blue) !important;
+  background-color: var(--light-blue) !important;
 }
 .navbar-light .navbar-nav .nav-link {
   color: #fff;
 }
 #enterprise-nav .navbar-nav .nav-link:hover {
-  color: var(  --light-blue) !important;
+  color: var(--light-blue) !important;
 }
 #enterprise-nav .navbar-nav .active {
   color: black !important;
@@ -249,75 +248,7 @@ footer > .bg-dark {
   color: inherit;
   background-color: inherit;
 }
-.item-container {
-  width: 250px;
-  height: 450px;
-  background-color: rgba(155, 154, 154, 0.5);
-  
-  position: relative;
-  background:linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73))
-}
-/* https://webdevetc.com/blog/how-to-add-a-gradient-overlay-to-a-background-image-using-just-css-and-html/ */
-.img-redwood {
-  background:   url("../img/redwood.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.img-steelbar {
-  background: url("../img/deformed-bar.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.img-ironsheet {
-  background: url("../img/ironsheets.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.img-plywood {
-  background: url("../img/plywood.jpg") center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.img-cement {
-  background: url("../img/Raysut-Cement.png") center center no-repeat;
-  background-size: cover;
-  position: relative;
-}
-.item-container::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(95, 95, 95, 0.2);
-}
-.img-info-box {
 
-  background: linear-gradient(#7484e085, #fd3f7eba);
-  width: 100%;
-  height: 100%;
-  position: relative;
-  color: white;
- 
-  transition: all  ease-in-out.3s;
-  opacity: 0;
-}
-.img-caption{
-  position: absolute;
-  bottom: 10%;
-  padding: 20px;
-}
-
-.item-container:hover {
-
-}
-.item-display {
-  background-color: #cccc;
-}
-.item-container:hover > .img-info-box {
-  opacity: 1;
-  animation: fadein ease-in-out 0.5s;
-  z-index: 100;
-}
 .bg-red {
   background-color: var(--main-red-color) !important;
 }
