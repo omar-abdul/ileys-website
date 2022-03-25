@@ -22,7 +22,6 @@ window.addEventListener("scroll", function(e) {
 });
 AOS.init();
 document.addEventListener("aos:in:color", ({ detail  })=>{
-    console.log("animated in", detail);
     detail.classList.add("change-color");
 });
 

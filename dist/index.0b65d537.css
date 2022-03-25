@@ -7,6 +7,10 @@
   color: var(--light-blue);
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: Raleway, sans-serif;
 }
@@ -51,8 +55,7 @@ a, a:hover {
   transform: translate(-50%, -50%);
 }
 
-#content {
-  overflow: hidden;
+section {
 }
 
 .sub-content {
