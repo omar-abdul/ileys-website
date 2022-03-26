@@ -5,6 +5,9 @@
 .primary-text {
   color: var(--light-blue);
 }
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Raleway", sans-serif;
@@ -48,8 +51,7 @@ a:hover {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-#content {
-  overflow: hidden;
+section {
 }
 .sub-content {
   margin-top: 100px;
@@ -423,4 +425,5 @@ blockquote {
   .item-container {
     margin: auto;
   }
+  /*TODO  Add media query for touch screens*/
 }
