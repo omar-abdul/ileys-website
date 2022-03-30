@@ -1,3 +1,5 @@
+import axios from "axios";
+
 var section = document.querySelectorAll(".section");
 var sections = {};
 var i = 0;
@@ -38,4 +40,29 @@ window.addEventListener("scroll", function (e) {
 AOS.init();
 document.addEventListener("aos:in:color", ({ detail }) => {
   detail.classList.add("change-color");
+});
+
+const contactForm = document.getElementById("contact-form");
+
+contactForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let formData = new FormData(contactForm);
+  const testData = [...formData.entries()];
+  const [arr] = testData[0];
+  console.log(arr);
+  axios
+    .post(
+      "https://reqres.in/api/users",
+
+      {
+        data: testData,
+        headers: {
+          "Content-Type": "application/json; charset=UTF-8",
+        },
+      }
+    )
+
+    .then((res) => {
+      const { data } = res.data;
+    });
 });
