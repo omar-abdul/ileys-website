@@ -47,22 +47,16 @@ const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let formData = new FormData(contactForm);
-  const testData = [...formData.entries()];
-  const [arr] = testData[0];
-  console.log(arr);
   axios
     .post(
-      "https://reqres.in/api/users",
-
+      "https://reqres.in/api/users", formData,
       {
-        data: testData,
-        headers: {
-          "Content-Type": "application/json; charset=UTF-8",
-        },
+        transformRequest:formData=>formData
       }
     )
 
     .then((res) => {
       const { data } = res.data;
+      console.log(data)
     });
 });
