@@ -47,16 +47,16 @@ const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let formData = new FormData(contactForm);
+  const testData = [...formData.entries()]
   axios
     .post(
-      "https://reqres.in/api/users", formData,
-      {
-        transformRequest:formData=>formData
+      "http://192.168.4.250:55000/user.php", {
+        data:[...formData.entries()],
       }
     )
 
     .then((res) => {
       const { data } = res.data;
-      console.log(data)
-    });
+      console.log(res)
+    }).catch(e=>console.log(e));
 });
