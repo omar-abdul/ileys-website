@@ -1,10 +1,13 @@
 <?php
 header("Content-Type : application/json");
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST');
-header("Access-Control-Allow-Headers: X-Requested-With");
+// p
+$json = file_get_contents('php://input');
+$data = (array)json_decode($json);
 
+    $res = [
+        'err'=>'Exists'
+    ];
+    echo json_encode($res);
 
-echo json_encode( res=>$_POST['name']);
 
 ?>

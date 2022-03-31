@@ -47,16 +47,31 @@ const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let formData = new FormData(contactForm);
-  const testData = [...formData.entries()]
+  var object = {};
+  formData.forEach((value, key) => object[key] = value);
+  var json = JSON.stringify(object);
+
+  const name= document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const message = document.getElementById('message').value;
+
+  const obj = {name,email,message}
+  console.log(obj)
+
+
   axios
     .post(
-      "http://192.168.4.250:55000/user.php", {
-        data:[...formData.entries()],
+      "./user.php", obj ,{
+        headers:{
+          "Content-Type":"application/json"
+        }
       }
     )
 
+
     .then((res) => {
-      const { data } = res.data;
-      console.log(res)
+      const { data } = res;
+      if (data.err)console.log(data.err)
+      console.log('none');
     }).catch(e=>console.log(e));
 });
