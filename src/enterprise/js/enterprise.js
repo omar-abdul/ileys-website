@@ -48,14 +48,15 @@ contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
   let formData = new FormData(contactForm);
   const testData = [...formData.entries()];
-  const [arr] = testData[0];
-  console.log(arr);
+  var object = {};
+  formData.forEach((value, key) => (object[key] = value));
+  var json = JSON.stringify(object);
   axios
     .post(
-      "https://reqres.in/api/users",
+      "./users.php",
+      json,
 
       {
-        data: testData,
         headers: {
           "Content-Type": "application/json; charset=UTF-8",
         },
@@ -63,6 +64,8 @@ contactForm.addEventListener("submit", (e) => {
     )
 
     .then((res) => {
-      const { data } = res.data;
-    });
+      const { data } = res;
+      console.log(data);
+    })
+    .catch((e) => console.log(e));
 });
