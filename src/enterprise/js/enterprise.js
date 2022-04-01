@@ -42,30 +42,110 @@ document.addEventListener("aos:in:color", ({ detail }) => {
   detail.classList.add("change-color");
 });
 
+const loadEvent = new Event("loading-screen", {
+  cancelable: true,
+  bubbles: true,
+  composed: true,
+});
+const endLoadEvent = new Event("end-load", {
+  cancelable: true,
+  bubbles: true,
+  composed: true,
+});
+
+const loadWrapper = document.getElementById("loader-wrapper");
+const content = document.getElementById("content");
+content.addEventListener(
+  "loading-screen",
+  () => {
+    loadWrapper.classList.remove("fadeout");
+    loadWrapper.classList.remove("hide");
+  },
+  false
+);
+
+content.addEventListener(
+  "end-load",
+  () => loadWrapper.classList.add("hide", "fadeout"),
+  false
+);
 const contactForm = document.getElementById("contact-form");
+let name, email, message;
 
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
-  let formData = new FormData(contactForm);
-  const testData = [...formData.entries()];
-  var object = {};
-  formData.forEach((value, key) => (object[key] = value));
-  var json = JSON.stringify(object);
-  axios
-    .post(
-      "./users.php",
-      json,
-
-      {
+  name = document.getElementById("name").value;
+  email = document.getElementById("email").value;
+  message = document.getElementById("message").value;
+  const obj = validateInput({ name, email, message });
+  if (!obj.err) {
+    content.dispatchEvent(loadEvent);
+    axios
+      .post("./user.php", obj, {
         headers: {
-          "Content-Type": "application/json; charset=UTF-8",
+          "Content-Type": "application/json",
         },
-      }
-    )
+      })
 
-    .then((res) => {
-      const { data } = res;
-      console.log(data);
-    })
-    .catch((e) => console.log(e));
+      .then((res) => {
+        const { data } = res;
+
+        showMessage(data);
+        content.dispatchEvent(endLoadEvent);
+      })
+      .catch((e) => console.log(e));
+  } else {
+    const errHtml = document.getElementById("alertMessage");
+    obj.err.map((v) => {
+      const p = document.createElement("p");
+      p.textContent = v;
+
+      errHtml.appendChild(p);
+    });
+    errHtml.classList.add("alert-danger");
+    errHtml.classList.remove("d-none");
+  }
 });
+
+const showMessage = (data) => {
+  const messageArea = document.getElementById("alertMessage");
+  const p = document.createElement("p");
+  !data.err
+    ? (p.textContent = "Message Sent Succesfully")
+    : (p.textContent = "Message was not sent");
+  messageArea.appendChild(p);
+
+  messageArea.classList.add("alert-success");
+  messageArea.classList.remove("d-none");
+
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+
+  setTimeout(() => {
+    messageArea.classList.add("d-none");
+    messageArea.classList.remove("alert-success");
+  }, 2000);
+};
+
+const validateInput = (obj) => {
+  const err = [];
+  Object.entries(obj).forEach((entry) => {
+    const [key, value] = entry;
+    if (!value) {
+      err.push(toTitleCase(key) + " field cannot be left empty");
+    }
+    return;
+  });
+
+  if (err.length > 0) {
+    return { err };
+  }
+  return { ...obj };
+};
+
+function toTitleCase(str) {
+  return str.replace(/\w\S*/g, function (txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}

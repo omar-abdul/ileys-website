@@ -154,7 +154,7 @@ section {
   color: #fff;
 }
 #enterprise-nav .navbar-nav .nav-link:hover {
-  color: var(--light-blue) !important;
+  color: #a1a1a1 !important;
 }
 #enterprise-nav .navbar-nav .active {
   color: black !important;

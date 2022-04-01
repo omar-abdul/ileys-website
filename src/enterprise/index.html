@@ -256,30 +256,33 @@
     <!-- <section>TO DO PUT BLOG HERE</section> -->
 
     <section id="contact-us" class="section">
+
+      <a href="./user.php" class="d-none"></a>
       <div class="container-fluid p-5 mt-5 bg-dark">
         <div class="container">
           <h2 class="text-white text-center p-4"> Send us an email and we will get right back to you!</h2>
+          <div class="alert  d-none" id="alertMessage"></div>
           <form id="contact-form">
             <div class="row g-2">
 
               <div class="col-md">
                 <div class="form-floating">
-                  <input type="text" class="form-control" id="floatingName" name="name" placeholder="Name" required>
-                  <label for="floatingName">Name</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                  <label for="name">Name</label>
                 </div>
               </div>
               <div class="col-md">
                 <div class="form-floating mb-3">
-                  <input type="email" class="form-control" id="floatingInput" name="email"
-                    placeholder="name@example.com" required>
-                  <label for="floatingInput">Email address</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com"
+                    required>
+                  <label for="email">Email address</label>
                 </div>
               </div>
               <div class="col-12">
                 <div class="form-floating">
-                  <textarea class="form-control" id="floatingMessage" name="message" placeholder="Message"
+                  <textarea class="form-control" id="message" name="message" placeholder="Message"
                     style="height: 230px;" required></textarea>
-                  <label for="floatingMessage">Message</label>
+                  <label for="message">Message</label>
                 </div>
               </div>
               <button type="submit" class="btn btn-primary p-3">SUBMIT</button>
