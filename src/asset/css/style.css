@@ -31,11 +31,6 @@ a:hover {
   opacity: 0.6;
 }
 
-@media (min-width: 768px) {
-  .h-md-100 {
-    height: 100vh;
-  }
-}
 .btn-round {
   border-radius: 30px;
 }
@@ -51,8 +46,7 @@ a:hover {
   top: 50%;
   transform: translate(-50%, -50%);
 }
-section {
-}
+
 .sub-content {
   margin-top: 100px;
 }
@@ -147,60 +141,6 @@ section {
 .transparent {
   background-color: transparent !important;
 }
-.bg-light {
-  background-color: var(--light-blue) !important;
-}
-.navbar-light .navbar-nav .nav-link {
-  color: #fff;
-}
-#enterprise-nav .navbar-nav .nav-link:hover {
-  color: #a1a1a1 !important;
-}
-#enterprise-nav .navbar-nav .active {
-  color: black !important;
-}
-.bg-light-blue {
-  background-color: rgb(67, 133, 231) !important;
-}
-.red-text .nav-link {
-  font-weight: bold;
-}
-.red-text {
-  color: var(--main-red-color);
-}
-
-.header-bg {
-  background: url("../img/container-image.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  height: 100vh;
-}
-.header-bg::before {
-  content: "";
-  position: absolute;
-  height: 100vh;
-  width: 100%;
-  background: rgba(99, 99, 99, 0.6);
-}
-.arrow {
-  position: absolute;
-  bottom: 9%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(90deg);
-  -webkit-transform: rotate(90deg);
-  -webkit-animation: bounce 0.5s ease-in-out infinite;
-  animation: bounce 0.5s ease-in-out infinite;
-  -o-animation: bounce 0.5s ease-in-out infinite;
-  -moz-animation: bounce 0.5s ease-in-out infinite;
-}
-.bg-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 3em;
-}
 
 .fadeout {
   -webkit-animation: fadeout 2s ease;
@@ -230,59 +170,6 @@ html.sr .load-hidden {
 footer {
   position: relative;
   border: 3px solid transparent;
-}
-footer > .bg-dark {
-  border-top-color: rgb(253, 182, 76);
-}
-.social-icon {
-  color: inherit;
-}
-.social-icon:hover .fa-facebook {
-  color: #3b5998;
-}
-.social-icon:hover .fa-twitter {
-  color: #1da1f2;
-}
-.social-icon:hover .fa-linkedin-in {
-  color: #0077b5;
-}
-.list-group > .list-group-item {
-  color: inherit;
-  background-color: inherit;
-}
-
-.bg-red {
-  background-color: var(--main-red-color) !important;
-}
-
-.about-header {
-  background: url("../img/ileys-tower.jpg") no-repeat 50% 10%;
-  background-size: cover;
-  background-attachment: fixed;
-  position: relative;
-  height: 300px;
-  width: 100%;
-}
-
-.vertical-line {
-  display: block;
-  position: relative;
-  left: 50%;
-  top: 50%;
-  width: 150px;
-  height: 500px;
-  margin: -250px -300px;
-  border: 1px solid transparent;
-  border-right-color: #35bdff;
-}
-
-blockquote {
-  font: 14px/22px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-left: 50px;
-  padding-left: 15px;
-  border-left: 3px solid #ccc;
 }
 
 /* Animation key frames */
@@ -418,12 +305,8 @@ blockquote {
 }
 
 /* Animation Frames */
-
-/*media queries*/
-
-@media only screen and (max-width: 500px) {
-  .item-container {
-    margin: auto;
+@media (min-width: 768px) {
+  .h-md-100 {
+    height: 100vh;
   }
-  /*TODO  Add media query for touch screens*/
 }

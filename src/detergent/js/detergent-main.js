@@ -1,3 +1,20 @@
+document.getElementById("content").style.opacity = 0;
+document.onreadystatechange = function () {
+  var state = document.readyState;
+  if (state == "interactive") {
+  } else if (state == "complete") {
+    setTimeout(function () {
+      //document.getElementById('interactive');
+
+      document.getElementById("content").classList.add("fadein");
+      document
+        .getElementById("loader-wrapper")
+        .classList.add("fadeout", "hide");
+      document.getElementById("content").style.opacity = 1;
+    }, 1000);
+  }
+};
+
 window.addEventListener("scroll", function (e) {
   var scrollpos = window.scrollY;
   if (scrollpos > 1) {
@@ -25,8 +42,6 @@ AOS.init();
 //header:'[data-scroll-header]'
 //});
 
-
-
 // Change Active element on scroll
 
 var section = document.querySelectorAll(".section");
@@ -46,7 +61,7 @@ let slideInterval;
 
 const nextSlide = () => {
   const current = document.querySelector(".current");
-  current.classList.remove("current");
+  // current.classList.remove("current");
 
   if (current.nextElementSibling) {
     current.nextElementSibling.classList.add("current");
@@ -58,7 +73,7 @@ const nextSlide = () => {
 };
 const prevSlide = () => {
   const current = document.querySelector(".current");
-  current.classList.remove("current");
+  // current.classList.remove("current");
 
   if (current.previousElementSibling) {
     current.previousElementSibling.classList.add("current");
@@ -86,26 +101,3 @@ prev.addEventListener("click", () => {
 if (auto) {
   slideInterval = setInterval(nextSlide, intervalTime);
 }
-
-// window.onscroll = function () {
-//   var scrollPosition =
-//     document.body.scrollTop || document.documentElement.scrollTop;
-
-//   if (scrollPosition < 30) {
-//     var navlink = document.querySelectorAll("#menu-items>.nav-link");
-
-//     for (var k = 0; k < navlink.length; k++) {
-//       navlink[k].classList.remove("active");
-//     }
-//   }
-
-//   for (i in sections) {
-//     if (sections[i] <= scrollPosition) {
-//       if (document.querySelector(".nav-link.active")) {
-//         document.querySelector(".nav-link.active").classList.remove("active");
-//       }
-
-//       document.querySelector("a[href*=" + i + "]").classList.add("active");
-//     }
-//   }
-// };

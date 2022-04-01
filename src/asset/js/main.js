@@ -1,7 +1,7 @@
+document.getElementById("content").style.opacity = 0;
 document.onreadystatechange = function () {
   var state = document.readyState;
   if (state == "interactive") {
-    document.getElementById("content").style.visibility = "hidden";
   } else if (state == "complete") {
     setTimeout(function () {
       //document.getElementById('interactive');
@@ -10,7 +10,7 @@ document.onreadystatechange = function () {
       document
         .getElementById("loader-wrapper")
         .classList.add("fadeout", "hide");
-      document.getElementById("content").style.visibility = "visible";
+      document.getElementById("content").style.opacity = 1;
     }, 1000);
   }
 };
