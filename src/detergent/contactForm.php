@@ -46,7 +46,7 @@ if(isset($_SERVER) && $_SERVER['REQUEST_METHOD']=='POST'){
     $mail->addCC($cc);
     $mail->isHTML(true);                                  
     $mail->Subject = 'Contact Form';
-    $mail->Body    = $output['message'];
+    $mail->Body    = '<h1>Message from Contact Form </h1></br> <p>'.$output['message'].'</p>';
 
     if(!$mail->send()){
         $res = ['data'=>'failed','err'=>$mail->ErrorInfo];

@@ -100,7 +100,7 @@ contactForm.addEventListener("submit", (e) => {
   if (!obj.err) {
     content.dispatchEvent(loadEvent);
     axios
-      .post("./user.php", obj, {
+      .post("./contactForm.php", obj, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -133,8 +133,9 @@ const showMessage = (data) => {
     ? (p.textContent = "Message Sent Succesfully")
     : (p.textContent = "Message was not sent");
   messageArea.appendChild(p);
-
-  messageArea.classList.add("alert-success");
+  !data.err
+    ? messageArea.classList.add("alert-success")
+    : messageArea.classList.add("alert-danger");
   messageArea.classList.remove("d-none");
 
   document.getElementById("name").value = "";
