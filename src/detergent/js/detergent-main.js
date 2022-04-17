@@ -1,9 +1,12 @@
-import { async } from "@firebase/util";
 import axios from "axios";
 import { initializeApp } from "firebase/app";
-import { getFirestore, addDoc, collection } from "firebase/firestore";
-
-import firebaseConfig from "../config";
+import {
+  getFirestore,
+  addDoc,
+  collection,
+  getDoc,
+  getDocs,
+} from "firebase/firestore";
 
 document.getElementById("content").style.opacity = 0;
 document.onreadystatechange = function () {
@@ -46,7 +49,7 @@ const slides = document.querySelectorAll(".slide");
 const next = document.querySelector("#next");
 const prev = document.querySelector("#prev");
 const auto = true;
-const intervalTime = 5000;
+const intervalTime = 6000;
 
 let slideInterval;
 
@@ -199,20 +202,3 @@ function toTitleCase(str) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
 }
-
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
-async () => {
-  try {
-    const docRef = await addDoc(collection(db, "users"), {
-      first: "Alan",
-      middle: "Mathison",
-      last: "Turing",
-      born: 1912,
-    });
-
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-};

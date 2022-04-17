@@ -36,24 +36,6 @@ ul {
   background-attachment: fixed !important;
 }
 
-.carousel-inner .carousel-item {
-  height: 100vh;
-}
-.carousel-inner .carousel-item::before {
-  content: "";
-  position: absolute;
-  height: inherit;
-  width: 100%;
-  background: rgba(99, 99, 99, 0.6);
-}
-.carousel-text {
-  position: absolute;
-  right: 60%;
-  bottom: 20%;
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
-  background-color: rgba(49, 62, 70, 0.4);
-}
 .slider-container {
   position: relative;
   overflow: hidden;
@@ -73,6 +55,7 @@ ul {
 }
 .slide.current {
   opacity: 1;
+  z-index: 100;
 }
 .slide .content {
   position: absolute;

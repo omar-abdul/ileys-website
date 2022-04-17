@@ -40,7 +40,7 @@ if(isset($_SERVER) && $_SERVER['REQUEST_METHOD']=='POST'){
     $mail->Password   = 'work42@92';                               
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            
     $mail->Port       = 465;    
-    $mail->setFrom('Contact Form', 'ILEYS ENTERPRISES');
+    $mail->setFrom('no-reply@ileys.com', 'ILEYS ENTERPRISES');
     $mail->addReplyTo($from,$fromName);
     $mail->addAddress('omarabdirisaq@ileys.com');
     $mail->addCC($cc);
