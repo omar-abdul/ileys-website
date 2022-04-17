@@ -1,10 +1,18 @@
+import { async } from "@firebase/util";
 import axios from "axios";
+import { initializeApp } from "firebase/app";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
+
+import firebaseConfig from "../config";
+
 document.getElementById("content").style.opacity = 0;
 document.onreadystatechange = function () {
   var state = document.readyState;
   if (state == "interactive") {
   } else if (state == "complete") {
     setTimeout(function () {
+      //document.getElementById('interactive');
+
       document.getElementById("content").classList.add("fadein");
       document
         .getElementById("loader-wrapper")
@@ -97,8 +105,7 @@ const endLoadEvent = new Event("end-load", {
 });
 
 const loadWrapper = document.getElementById("loader-wrapper");
-const content = document.getElementById("content");
-content.addEventListener(
+window.addEventListener(
   "loading-screen",
   () => {
     loadWrapper.classList.remove("fadeout");
@@ -107,7 +114,7 @@ content.addEventListener(
   false
 );
 
-content.addEventListener(
+window.addEventListener(
   "end-load",
   () => loadWrapper.classList.add("hide", "fadeout"),
   false
@@ -121,7 +128,7 @@ contactForm.addEventListener("submit", (e) => {
   const message = document.getElementById("message").value;
   const obj = validateInput({ name, email, message });
   if (!obj.err) {
-    content.dispatchEvent(loadEvent);
+    window.dispatchEvent(loadEvent);
     axios
       .post("./contactForm.php", obj, {
         headers: {
@@ -133,7 +140,7 @@ contactForm.addEventListener("submit", (e) => {
         const { data } = res;
 
         showMessage(data);
-        content.dispatchEvent(endLoadEvent);
+        window.dispatchEvent(endLoadEvent);
       })
       .catch((e) => console.log(e));
   } else {
@@ -168,7 +175,7 @@ const showMessage = (data) => {
   setTimeout(() => {
     messageArea.classList.add("d-none");
     messageArea.classList.remove("alert-success");
-  }, 2000);
+  }, 3000);
 };
 
 const validateInput = (obj) => {
@@ -192,3 +199,20 @@ function toTitleCase(str) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
 }
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+async () => {
+  try {
+    const docRef = await addDoc(collection(db, "users"), {
+      first: "Alan",
+      middle: "Mathison",
+      last: "Turing",
+      born: 1912,
+    });
+
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+};

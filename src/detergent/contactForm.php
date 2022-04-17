@@ -6,9 +6,9 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require ('../enterprise/PHPMailer-master/src/PHPMailer.php');
-require ('../enterprise/PHPMailer-master/src/Exception.php');
-require ('../enterprise/PHPMailer-master/src/SMTP.php');
+require ('../detergent/PHPMailer-master/src/PHPMailer.php');
+require ('../detergent/PHPMailer-master/src/Exception.php');
+require ('../detergent/PHPMailer-master/src/SMTP.php');
 
 
 
