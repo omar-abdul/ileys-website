@@ -129,7 +129,7 @@ ul {
 }
 
 .factory-banner {
-  background-image: url("../../asset/img/factory-bg.jpg");
+  background-image: url("../../asset/img/Factory.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -248,6 +248,19 @@ ul {
 .card-current {
   animation: fade-in ease 0.8s;
 }
+
+.line {
+  width: 0%;
+  margin: auto;
+  padding: 0.02em; /* not lower than 0.02em */
+  background-color: white;
+
+  height: 3px;
+}
+.line_animation {
+  animation: line_animation 4s ease forwards;
+}
+
 @keyframes fade-in {
   0% {
     opacity: 0;
@@ -257,5 +270,13 @@ ul {
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes line_animation {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 50%;
   }
 }

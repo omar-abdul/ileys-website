@@ -42,3 +42,11 @@ AOS.init();
 
 const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", submitForm);
+const line = document.querySelector(".line");
+const factBanner = document.querySelector(".factory-banner");
+
+window.addEventListener("scroll", (e) => {
+  console.log(factBanner.offsetTop, window.scrollY);
+  const y = factBanner.offsetTop;
+  if (window.scrollY >= y - 300) line.classList.add("line_animation");
+});
