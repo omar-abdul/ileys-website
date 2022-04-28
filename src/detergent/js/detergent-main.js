@@ -42,11 +42,17 @@ AOS.init();
 
 const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", submitForm);
-const line = document.querySelector(".line");
+const line = document.querySelectorAll(".line");
 const factBanner = document.querySelector(".factory-banner");
+const bannerText = document.querySelectorAll(".banner-text");
+const bannerWrapper = {};
+Array.prototype.forEach.call(line, (e, index) => {
+  bannerWrapper[index] = e.offsetParent.offsetTop + e.offsetTop;
+});
 
 window.addEventListener("scroll", (e) => {
-  console.log(factBanner.offsetTop, window.scrollY);
-  const y = factBanner.offsetTop;
-  if (window.scrollY >= y - 300) line.classList.add("line_animation");
+  for (var i in bannerWrapper) {
+    if (window.scrollY >= bannerWrapper[i] - 200)
+      line[i].classList.add("line_animation");
+  }
 });
