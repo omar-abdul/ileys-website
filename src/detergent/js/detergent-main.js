@@ -52,7 +52,7 @@ Array.prototype.forEach.call(line, (e, index) => {
 
 window.addEventListener("scroll", (e) => {
   for (var i in bannerWrapper) {
-    if (window.scrollY >= bannerWrapper[i] - 200)
+    if (window.scrollY >= bannerWrapper[i] - 300)
       line[i].classList.add("line_animation");
   }
 });
