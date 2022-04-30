@@ -40,19 +40,41 @@ AOS.init();
 //   sections[e.id] = e.offsetTop;
 // });
 
+/*contact form  action */
 const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", submitForm);
+/* End contact form */
+
+/* Underline animation under banner texts */
 const line = document.querySelectorAll(".line");
-const factBanner = document.querySelector(".factory-banner");
-const bannerText = document.querySelectorAll(".banner-text");
+
 const bannerWrapper = {};
 Array.prototype.forEach.call(line, (e, index) => {
   bannerWrapper[index] = e.offsetParent.offsetTop + e.offsetTop;
 });
 
+const coreValues = document.getElementById("core-values");
+const verticalLine = document.querySelector(".vertical-line");
+const factoryBanner = document.querySelector(".factory-banner");
+
+const c_height = coreValues.offsetParent.offsetTop + coreValues.offsetTop;
+let line_height;
+
 window.addEventListener("scroll", (e) => {
   for (var i in bannerWrapper) {
     if (window.scrollY >= bannerWrapper[i] - 300)
-      line[i].classList.add("line_animation");
+      line[i].classList.add("line_animation"); //Add animation
+  }
+  const currentHeight =
+    factoryBanner.scrollHeight -
+    Math.round(factoryBanner.scrollTop === factoryBanner.clientHeight);
+  if (window.scrollY >= c_height - 300 && !currentHeight) {
+    const newPercent =
+      ((window.scrollY - factoryBanner.scrollHeight) /
+        factoryBanner.scrollHeight) *
+      100;
+    const newHeight = newPercent <= 80 ? newPercent : 80;
+
+    verticalLine.setAttribute("style", `height:${newHeight}%`);
   }
 });
