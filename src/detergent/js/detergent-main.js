@@ -65,16 +65,7 @@ window.addEventListener("scroll", (e) => {
     if (window.scrollY >= bannerWrapper[i] - 300)
       line[i].classList.add("line_animation"); //Add animation
   }
-  const currentHeight =
-    factoryBanner.scrollHeight -
-    Math.round(factoryBanner.scrollTop === factoryBanner.clientHeight);
-  if (window.scrollY >= c_height - 300 && !currentHeight) {
-    const newPercent =
-      ((window.scrollY - factoryBanner.scrollHeight) /
-        factoryBanner.scrollHeight) *
-      100;
-    const newHeight = newPercent <= 80 ? newPercent : 80;
 
-    verticalLine.setAttribute("style", `height:${newHeight}%`);
-  }
+  if (window.scrollY >= c_height - 300)
+    verticalLine.setAttribute("style", `height:95%`);
 });

@@ -23,9 +23,9 @@ ul {
   list-style-type: none;
 }
 .bg-light-blue {
-  background-color:  var(--light-blue);
+  background-color: var(--light-blue);
 }
-.bg-darker-blue{
+.bg-darker-blue {
   background-color: rgb(0, 173, 204) !important;
 }
 .primary-text {
@@ -143,9 +143,9 @@ ul {
 .factory-banner::before {
   content: "";
   position: absolute;
- width: 100%;
- height: 100%;
- 
+  width: 100%;
+  height: 100%;
+
   background: rgba(99, 99, 99, 0.6);
 }
 .section-text {
@@ -216,15 +216,13 @@ ul {
   width: 50%;
 }
 
-.vertical-line{
-
+.vertical-line {
   width: 4px;
   padding: 0.02em;
   background-color: white;
-  margin:auto;
-  height: 10%; 
-  transition: 3s ease height;
-
+  margin: auto;
+  height: 10%;
+  transition: 2s ease-out height;
 }
 
 @media (max-width: 700px) {
@@ -267,7 +265,7 @@ ul {
 
 .line {
   width: 0%;
-  
+
   padding: 0.02em; /* not lower than 0.02em */
   background-color: white;
 
@@ -276,7 +274,6 @@ ul {
 .line_animation {
   animation: line_animation 2s ease forwards;
 }
-
 
 @keyframes fade-in {
   0% {
