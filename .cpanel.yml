@@ -6,4 +6,4 @@ deployment:
     # - /bin/cp -R /home/ileys/repositories/ileys-website2/public/asset  $DEPLOYPATH
     # - /bin/cp -R /home/ileys/repositories/ileys-website2/public/detergent  $DEPLOYPATH
     # - /bin/cp -R /home/ileys/repositories/ileys-website2/public/enterprise  $DEPLOYPATH
-      - /bin/cp -R /home/ileys/repositories/ileys-website2/dist $DEPLOYPATH
+      - /bin/cp -R /home/ileys/repositories/ileys-website2/dist/index.html $DEPLOYPATH
