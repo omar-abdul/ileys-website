@@ -122,8 +122,21 @@ ul {
   background: url("../../asset/img/washing-powder.jpg");
 }
 .slide:nth-child(3) {
-  background: url("../../asset/img/brand-powder.jpg");
+  background: url("../../asset/img/Gaari-shaambo.png");
 }
+.slide:nth-child(4){
+  background: url("../../asset/img/fresh-soap.png");
+}
+.slide:nth-child(5){
+  background: url("../../asset/img/gaari-with-number-gaaban.png");
+}
+.slide:nth-child(6){
+  background: url("../../asset/img/handwash-2022-2.png")
+}
+.slide:nth-child(7){
+  background: url("../../asset/img/Handwash-2022-.png");
+}
+
 .slide:nth-child(n) {
   background-size: cover;
   background-position: center;

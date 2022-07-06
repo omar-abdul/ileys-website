@@ -137,7 +137,23 @@ ul {
 }
 
 .slide:nth-child(3) {
-  background: url("../brand-powder.3cd239a6.jpg");
+  background: url("../Gaari-shaambo.bf7aab49.png");
+}
+
+.slide:nth-child(4) {
+  background: url("../fresh-soap.2bef3846.png");
+}
+
+.slide:nth-child(5) {
+  background: url("../gaari-with-number-gaaban.a7613457.png");
+}
+
+.slide:nth-child(6) {
+  background: url("../handwash-2022-2.3255827f.png");
+}
+
+.slide:nth-child(7) {
+  background: url("../Handwash-2022-.f2f0ce50.png");
 }
 
 .slide:nth-child(n) {
