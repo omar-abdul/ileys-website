@@ -55,10 +55,12 @@ ul {
   height: 100%;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
+  display: hidden;
 }
 .slide.current {
   opacity: 1;
   z-index: 100;
+  display: block;
 }
 .slide .content {
   position: absolute;
@@ -98,6 +100,7 @@ ul {
   cursor: pointer;
   padding: 13px 15px;
   outline: none;
+  z-index: 200;
 }
 .buttons button:hover {
   background-color: #fff;
@@ -124,16 +127,16 @@ ul {
 .slide:nth-child(3) {
   background: url("../../asset/img/Gaari-shaambo.png");
 }
-.slide:nth-child(4){
+.slide:nth-child(4) {
   background: url("../../asset/img/fresh-soap.png");
 }
-.slide:nth-child(5){
+.slide:nth-child(5) {
   background: url("../../asset/img/gaari-with-number-gaaban.png");
 }
-.slide:nth-child(6){
-  background: url("../../asset/img/handwash-2022-2.png")
+.slide:nth-child(6) {
+  background: url("../../asset/img/handwash-2022-2.png");
 }
-.slide:nth-child(7){
+.slide:nth-child(7) {
   background: url("../../asset/img/Handwash-2022-.png");
 }
 
@@ -287,51 +290,47 @@ ul {
 .line_animation {
   animation: line_animation 2s ease forwards;
 }
-#testimonials{
-  margin:5rem 0;
+#testimonials {
+  margin: 5rem 0;
 }
-.testmonial-card{
-  padding:2rem;
+.testmonial-card {
+  padding: 2rem;
   background: rgb(180, 51, 152);
   line-height: 1.5rem;
   border-radius: 25px;
-  color:rgb(250, 208, 239);
+  color: rgb(250, 208, 239);
   box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.2);
-  background-image: url('../../asset/img/quote-mark.svg');
+  background-image: url("../../asset/img/quote-mark.svg");
   background-repeat: no-repeat;
-  background-position-x: 30px; 
+  background-position-x: 30px;
   background-size: 50%;
-
 }
-.testmonial-card.dark{
-background-color: rgb(65, 65, 65);
-color:rgb(247, 247, 247);
-background-image: url('data:image/svg+xml;utf8,<svg enable-background="new 0 0 349.078 349.078" version="1.1" viewBox="0 0 349.08 349.08" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m198.78 322.44v-58.245c0-7.903 6.406-14.304 14.304-14.304 28.183 0 43.515-28.904 45.643-85.961h-45.643c-7.897 0-14.304-6.41-14.304-14.304v-122.99c0-7.9 6.406-14.301 14.304-14.301h121.69c7.896 0 14.305 6.408 14.305 14.301v122.99c0 27.349-2.761 52.446-8.181 74.611-5.568 22.722-14.115 42.587-25.398 59.049-11.604 16.917-26.132 30.192-43.155 39.437-17.152 9.304-37.09 14.026-59.267 14.026-7.891-6e-3 -14.298-6.413-14.298-14.31zm-184.48-72.554c-7.897 0-14.301 6.406-14.301 14.298v58.257c0 7.896 6.404 14.298 14.301 14.298 22.166 0 42.114-4.723 59.255-14.026 17.032-9.244 31.558-22.508 43.161-39.437 11.29-16.462 19.836-36.328 25.404-59.061 5.423-22.165 8.178-47.263 8.178-74.6v-122.99c0-7.9-6.41-14.301-14.304-14.301h-121.69c-7.897 0-14.301 6.407-14.301 14.301v122.99c0 7.899 6.404 14.304 14.301 14.304h45.002c-2.102 57.062-17.213 85.967-45.002 85.967z"/></svg>');
-
+.testmonial-card.dark {
+  background-color: rgb(65, 65, 65);
+  color: rgb(247, 247, 247);
+  background-image: url('data:image/svg+xml;utf8,<svg enable-background="new 0 0 349.078 349.078" version="1.1" viewBox="0 0 349.08 349.08" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m198.78 322.44v-58.245c0-7.903 6.406-14.304 14.304-14.304 28.183 0 43.515-28.904 45.643-85.961h-45.643c-7.897 0-14.304-6.41-14.304-14.304v-122.99c0-7.9 6.406-14.301 14.304-14.301h121.69c7.896 0 14.305 6.408 14.305 14.301v122.99c0 27.349-2.761 52.446-8.181 74.611-5.568 22.722-14.115 42.587-25.398 59.049-11.604 16.917-26.132 30.192-43.155 39.437-17.152 9.304-37.09 14.026-59.267 14.026-7.891-6e-3 -14.298-6.413-14.298-14.31zm-184.48-72.554c-7.897 0-14.301 6.406-14.301 14.298v58.257c0 7.896 6.404 14.298 14.301 14.298 22.166 0 42.114-4.723 59.255-14.026 17.032-9.244 31.558-22.508 43.161-39.437 11.29-16.462 19.836-36.328 25.404-59.061 5.423-22.165 8.178-47.263 8.178-74.6v-122.99c0-7.9-6.41-14.301-14.304-14.301h-121.69c-7.897 0-14.301 6.407-14.301 14.301v122.99c0 7.899 6.404 14.304 14.301 14.304h45.002c-2.102 57.062-17.213 85.967-45.002 85.967z"/></svg>');
 }
 
-.details{
+.details {
   display: flex;
   align-items: center;
   row-gap: 20px;
   flex-wrap: wrap;
-
-
 }
 /* .person-detail{
   display: flex;
   flex-direction: column;
 } */
-.designation{
-  font-size: .8em;
+.designation {
+  font-size: 0.8em;
 }
-.details img{
+.details img {
   border-radius: 50%;
   clip-path: circle();
   size: contain;
 }
 
-.blog-section{
+.blog-section {
   padding: 30px;
   margin: 10rem 1em;
   background-color: rgb(240, 240, 240);
@@ -356,4 +355,3 @@ background-image: url('data:image/svg+xml;utf8,<svg enable-background="new 0 0 3
     width: 35%;
   }
 }
-
