@@ -2,4 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/ileys/public_html/
-    - /bin/cp index.php $DEPLOYPATH
+    - /bin/cp -R /home/ileys/repositories/ileys-website/dist/* $DEPLOYPATH
