@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/ileys/public_html
-      - /bin/cp /home/ileys/repositories/ileys-website/dist/index.html $DEPLOYPATH
+    - export DEPLOYPATH=/home/ileys/public_html/
+      - /bin/cp /home/ileys/repositories/ileys-website/dist.zip $DEPLOYPATH
